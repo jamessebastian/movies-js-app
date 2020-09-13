@@ -25,11 +25,13 @@ function showMovies(movies) {
     main.innerHTML = "";
 
     movies.forEach((movie) => {
+        //object destructing
         const { poster_path, title, vote_average, overview } = movie;
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
 
+        //${} -- is string concatenation
         movieEl.innerHTML = `
             <img
                 src="${IMGPATH + poster_path}"
